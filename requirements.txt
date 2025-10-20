@@ -1,0 +1,12 @@
+# Runtime Python dependencies
+Flask>=2.0
+requests>=2.31.0
+psutil>=5.9.0
+
+# Optional (Linux production server)
+# gunicorn>=20.0.0
+
+# System tools (not installed via pip; optional depending on features)
+# - tcpdump (packet capture)
+# - tshark/Wireshark (traffic analysis)
+# - iptables, ipset, or ufw (firewall blocking on Linux)

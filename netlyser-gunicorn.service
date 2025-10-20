@@ -1,0 +1,14 @@
+[Unit]
+Description=NetLyser Dashboard (gunicorn)
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/opt/NetLyser
+Environment="PATH=/opt/NetLyser/venv/bin"
+ExecStart=/opt/NetLyser/venv/bin/gunicorn --workers 2 --bind 127.0.0.1:5000 wsgi:app
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

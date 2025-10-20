@@ -1,0 +1,13 @@
+[Unit]
+Description=NetLyser monitoring service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/NetLyser
+ExecStart=/usr/bin/python3 /opt/NetLyser/netlyser.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

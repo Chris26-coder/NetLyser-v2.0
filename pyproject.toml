@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netlyser"
+version = "2.0.0"
+description = "NetLyser - network monitoring and mitigation tool"
+authors = [ { name="NetLyser Maintainers" } ]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["requests", "psutil"]
